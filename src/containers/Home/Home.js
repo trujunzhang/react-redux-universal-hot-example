@@ -150,12 +150,6 @@ export default class Home extends Component {
               still-experimental <a href="https://github.com/erikras/redux-form" target="_blank">redux-form</a> to
               manage form state inside the Redux store. This includes immediate client-side validation.
             </dd>
-            <dt>Pagination</dt>
-            <dd>
-              The <Link to="/pagination">Pagination page</Link> uses
-              <a href="https://www.npmjs.com/package/violet-paginator" target="_blank">violet-paginator</a> to
-              paginate and sort records in a data table.
-            </dd>
             <dt>WebSockets / socket.io</dt>
             <dd>
               The <Link to="/chat">Chat</Link> uses the socket.io technology for real-time
