@@ -39,16 +39,22 @@ export default (store) => {
       <IndexRoute component={Telescope.components.PostsDailyWithSidebarPage}/>
 
       {/* Routes requiring login */}
-      <Route onEnter={requireLogin}>
-        <Route path="chat" component={Chat}/>
-        <Route path="loginSuccess" component={LoginSuccess}/>
-      </Route>
+      {/*<Route onEnter={requireLogin}>*/}
+      {/*<Route path="loginSuccess" component={LoginSuccess}/>*/}
+      {/*</Route>*/}
 
       {/* Routes */}
-      <Route path="about" component={About}/>
-      <Route path="login" component={Login}/>
-      <Route path="survey" component={Survey}/>
-      <Route path="widgets" component={Widgets}/>
+      <Route path="/post" component={Telescope.components.PostsSingle}/>
+      <Route path="/about" component={Telescope.components.AppAbout}/>
+      <Route path="/privacy" component={Telescope.components.AppPrivacy}/>
+      <Route path="/terms" component={Telescope.components.AppTermsOfService}/>
+      <Route path="/contact" component={Telescope.components.AppContact}/>
+      <Route path="/careers" component={Telescope.components.AppCareers}/>
+      <Route path="/list" component={Telescope.components.PostsListWithSidebarPage}/>
+      <Route path="/new/article" component={Telescope.components.SubmitAnArticle}/>
+      <Route path="/users/:slug" component={Telescope.components.UsersSingle}/>
+      <Route path="/verifyemail/:token" component={Telescope.components.UsersVerifyEmail}/>
+      <Route path="/removeaccount/:token" component={Telescope.components.UsersVerifyDeletion}/>
 
       {/* Catch all route */}
       <Route path="*" component={NotFound} status={404}/>
