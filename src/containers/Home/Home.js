@@ -12,41 +12,7 @@ export default class Home extends Component {
     return (
       <div className={styles.home}>
         <Helmet title="Home"/>
-        <div className={styles.masthead}>
-          <div className="container">
-            <div className={styles.logo}>
-              <p>
-                <img src={logoImage}/>
-              </p>
-            </div>
-            <h1>{config.app.title}</h1>
 
-            <h2>{config.app.description}</h2>
-
-            <p>
-              <a className={styles.github} href="https://github.com/erikras/react-redux-universal-hot-example"
-                 target="_blank">
-                <i className="fa fa-github"/> View on Github
-              </a>
-            </p>
-            <GithubButton user="erikras"
-                          repo="react-redux-universal-hot-example"
-                          type="star"
-                          width={160}
-                          height={30}
-                          count large/>
-            <GithubButton user="erikras"
-                          repo="react-redux-universal-hot-example"
-                          type="fork"
-                          width={160}
-                          height={30}
-                          count large/>
-
-            <p className={styles.humility}>
-              Created and maintained by <a href="https://twitter.com/erikras" target="_blank">@erikras</a>.
-            </p>
-          </div>
-        </div>
 
         <div className="container">
           <div className={styles.counterContainer}>
@@ -87,6 +53,10 @@ export default class Home extends Component {
             <li><a href="http://eslint.org" target="_blank">ESLint</a> to maintain a consistent code style</li>
             <li><a href="https://github.com/erikras/redux-form" target="_blank">redux-form</a> to manage form state
               in Redux
+            </li>
+            <li><a href="https://github.com/sslotsky/violet-paginator" target="_blank">violet-paginator</a> to manage
+              list state
+              in Redux, including pagination, sorting, filtering, updating, and more.
             </li>
             <li><a href="https://github.com/erikras/multireducer" target="_blank">multireducer</a> combine several
               identical reducer states into one key-based reducer
@@ -151,6 +121,12 @@ export default class Home extends Component {
               The <Link to="/survey">Survey page</Link> uses the
               still-experimental <a href="https://github.com/erikras/redux-form" target="_blank">redux-form</a> to
               manage form state inside the Redux store. This includes immediate client-side validation.
+            </dd>
+            <dt>Pagination</dt>
+            <dd>
+              The <Link to="/pagination">Pagination page</Link> uses
+              <a href="https://www.npmjs.com/package/violet-paginator" target="_blank">violet-paginator</a> to
+              paginate and sort records in a data table.
             </dd>
             <dt>WebSockets / socket.io</dt>
             <dd>
