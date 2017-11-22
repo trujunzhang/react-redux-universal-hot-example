@@ -1,4 +1,3 @@
-const {isImmutable, Map, List, Stack} = require('immutable');
 
 const token = require('crypto-token');
 
@@ -10,13 +9,6 @@ const delay = (function () {
     timer = setTimeout(callback, ms);
   };
 })();
-
-export function convertToObject(source) {
-  if (isImmutable(source)) {
-    return source.toJS();
-  }
-  return source;
-}
 
 export function delayEvent(callback, ms) {
   delay(() => {

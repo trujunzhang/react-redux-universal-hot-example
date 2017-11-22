@@ -22,7 +22,6 @@
  * @flow
  */
 
-const {convertToObject} = require('../../lib/utils');
 
 const _ = require('underscore');
 
@@ -66,7 +65,7 @@ export function getDefaultListTask(terms, lastTask = {ready: false, results: []}
  * @returns {}
  */
 export function byListId(listContainerTasks, {listId}, lastTask) {
-  const taskObject = convertToObject(listContainerTasks);
+  const taskObject = listContainerTasks;
   let task = taskObject[listId];
   let newTask = null;
   let newResults = null;
