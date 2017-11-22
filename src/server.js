@@ -94,7 +94,7 @@ const commonConfigure = {
 
 
 let parseConfig = {
-  publicServerURL: 'http://politicl-uapp.herokuapp.com/',
+  publicServerURL: 'https://politicl-uapp.herokuapp.com/',
   databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
   // appId: process.env.APP_ID || 'myAppId',
   // clientKey: process.env.CLIENT_KEY || '',
