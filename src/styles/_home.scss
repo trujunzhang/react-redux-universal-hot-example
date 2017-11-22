@@ -1,0 +1,306 @@
+@media(max-width: 768px) {
+  .container_3aBgK {
+    margin-top: 20px
+  }
+}
+
+@media(min-width: 769px) {
+  .container_3aBgK {
+    margin-top: 30px;
+  }
+}
+
+.content_1jnXo {
+  @include flexbox();
+  @include flex(1);
+
+  margin-bottom: 40px;
+}
+
+// Left panel
+@media(min-width: 769px) {
+  .results_37tfm {
+    @include flex();
+  }
+}
+
+@media(max-width: 768px) {
+  .results_37tfm {
+    width: 100%
+  }
+}
+
+@media(min-width: 769px) {
+  .fullWidthBox_3Dggh .header_3GFef {
+    margin: 0 20px
+  }
+}
+
+// Left posts list's title
+
+.header_3GFef, .header_for_user_profile_social {
+  @include flexbox();
+  @include align-items(baseline);
+  @include justify-content(space-between);
+
+  border-bottom: 1px solid #f2f2f2;
+  padding: 15px 0;
+  box-sizing: border-box;
+}
+
+@media (min-width: 769px) {
+  .paddedBox_2UY-S {
+    padding: 0 20px
+  }
+}
+
+.paddedBox_2UY-S .header_3GFef + * {
+  margin-top: 20px
+}
+
+@media (max-width: 768px) {
+  .paddedBox_2UY-S .header_3GFef.hideOnSmallScreen_1VjPA + * {
+    margin-top: 0
+  }
+}
+
+@media (min-width: 769px) {
+  .paddedBox_2UY-activity {
+    padding: 0;
+  }
+}
+
+.paddedBox_2UY-activity .header_3GFef + * {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .paddedBox_2UY-activity .header_3GFef.hideOnSmallScreen_1VjPA + * {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hideOnSmallScreen_1VjPA {
+    display: none;
+  }
+}
+
+.header_title {
+  font-style: normal;
+  font-weight: normal;
+}
+
+.title_38djq {
+  line-height: 20px
+}
+
+.toggle_Tx6Vy {
+  a {
+    padding: 0 .5em;
+    cursor: pointer
+  }
+  a:first-of-type {
+    border-right: 1px solid #f2f2f2
+  }
+}
+
+// Right panel
+.sidebar_Y2LGQ {
+  @include mq($from: desktop) {
+    margin-left: 20px;
+    width: 350px;
+  }
+  @include mq($until: desktop) {
+    display: none;
+    position: absolute;
+    top: 66px;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-right: 1px solid gray;
+  }
+}
+
+a.sidebar-mobile-toggle {
+  margin-right: 15px;
+  cursor: pointer;
+  @include mq($until: desktop) {
+    display: inline-flex
+  }
+  @include mq($from: desktop) {
+    display: none;
+  }
+}
+
+a.nav-mobile-toggle {
+  margin-left: 84px;
+  cursor: pointer;
+  @include mq($until: desktop) {
+    display: inline-flex
+  }
+  @include mq($from: desktop) {
+    display: none;
+  }
+}
+
+// .siteNav-logo .svgIcon--45px{
+//   @include mq($until: desktop) {
+//     width: 100px;
+//   }
+// }
+.buttonSet {
+  .actionNavbtn {
+    @include mq($until: desktop) {
+      display: block;
+      background: white;
+    }
+  }
+}
+
+.metabar-block.metabar-block--right.u-floatRight.u-height65.u-xs-height56 {
+  @include mq($until: desktop) {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    background: white;
+  }
+}
+
+.modal--content {
+  @include mq($until: desktop) {
+    margin-top: 0 !important;
+  }
+}
+
+.login-fullscreen {
+  // background: url('/images/politicl-logo.png') top center/200px no-repeat !important;
+
+  @include mq($until: desktop) {
+    padding: 80px 10px 10px !important;
+    margin: 0 !important;;
+  }
+  #login_main_section {
+    .buttonGroup_1mB5C {
+      @include mq($until: desktop) {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+  }
+  #user-signin-panel {
+    .overlay-content {
+      @include mq($until: desktop) {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+  }
+
+}
+
+// Loading
+.loading_2hQxH {
+  display: block;
+  padding: 0 0 20px;
+  text-align: center;
+  width: 100%
+}
+
+.signUpButtonTop {
+  padding: 6px 13px;
+  border: 1px solid #0b9eda;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 2px;
+  background-color: #0b9eda;
+  text-transform: uppercase;
+  font-size: 13px;
+  &:hover {
+    background-color: #0884C7;
+    // color:#0884C7;
+    color: white;
+  }
+}
+
+.signInButtonTop {
+  color: #EFEFEF;
+  margin-right: 10px;
+  padding: 6px 13px;
+  border: 1px solid lightgray;
+  color: #000;
+  font-weight: 600;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-size: 13px;
+  &:hover {
+    color: #0884C7;
+    background-color: #f3f3f3;
+  }
+}
+
+#user-signin-panel .textInput--underlined {
+  font-weight: 400;
+  // color: lightgray;
+  color: #656565;
+  &::-webkit-input-placeholder {
+    color: darkgray !important;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    color: darkgray !important;
+  }
+
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: darkgray !important;
+  }
+
+  &:-ms-input-placeholder {
+    color: darkgray !important;
+  }
+}
+
+#nav_signup_button {
+  &:hover {
+    text-decoration: underline !important;
+    // color:#EFEFEF;
+  }
+}
+
+.makeGrayTip.list-itemDescription {
+  font-size: 14px;
+  margin-right: 20px;
+  margin-bottom: 0;
+  color: rgba(0, 0, 0, 0.44);
+}
+
+label#header-searchbar-panel {
+  display: inline-block !important;
+}
+
+@include mq($until: desktop) {
+
+  .buttonSet {
+    margin: 5px;
+    margin-bottom: 0px !important;
+  }
+  .actionNavbtn {
+    height: auto !important;
+    a {
+      background: none;
+      color: #0a9fda;
+      border-color: #0a9fda;
+      text-transform: none;
+      border: 0;
+      font-size: 14px;
+      display: block;
+    }
+  }
+  .u-height65 {
+    height: auto !important;
+    z-index: 9999999;
+  }
+  label#header-searchbar-panel {
+    margin: 0px 10px
+  }
+}

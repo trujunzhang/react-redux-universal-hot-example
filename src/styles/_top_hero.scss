@@ -1,0 +1,235 @@
+#max-width-for-hero {
+  max-width: 1100px;
+}
+
+.top-hero-color {
+  color: #fff !important;
+}
+
+#top-hero-right-twitter {
+  font-size: 40px;
+  font-weight: 700;
+  color: #24a1d8;
+  margin-left: 40px;
+}
+
+.hero_4c01e {
+  width: 100%;
+  max-height: 360px;
+  background-color: #353741;
+  border-bottom: 1px solid #e8e8e8
+}
+
+.constraintWidth_c0bbf {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 320px
+}
+
+@media (max-width: 768px) {
+  .constraintWidth_c0bbf {
+    padding: 0 10px
+  }
+}
+
+@media (min-width: 769px) {
+  .constraintWidth_c0bbf {
+    padding: 0 15px
+  }
+}
+
+.content_58aa5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px
+}
+
+.cta_ee41c {
+  margin-right: 220px
+}
+
+.kitty_7eed9 {
+  margin-top: 8px;
+  margin-right: 80px;
+}
+
+.kitty_7eed9 img {
+  width: 300px;
+  height: 127px;
+}
+
+.close_hero_1JGKW {
+  cursor: pointer;
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  margin-bottom: 4px;
+  svg path {
+    fill: #999
+  }
+}
+
+.mobile {
+  .close_hero_1JGKW {
+    top: 60px !important;
+    left: 12px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .kitty_7eed9 {
+    display: none
+  }
+
+  .cta_ee41c {
+    width: 100%;
+    margin: 0 10px;
+    margin-right: 0
+  }
+
+  .content_58aa5 {
+    padding-top: 20px;
+    padding-bottom: 20px
+  }
+
+  .close_hero_1JGKW {
+    top: 60px !important;
+    left: 12px !important;
+  }
+}
+
+.font_9d927 {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif
+}
+
+.font_9d927 h1, .font_9d927 h2, .font_9d927 h3, .font_9d927 h4, .font_9d927 h5, .font_9d927 h6 {
+  font-size: inherit;
+  font-weight: inherit
+}
+
+.font_9d927 a, a.font_9d927 {
+  color: inherit;
+  cursor: pointer
+}
+
+@media (max-width: 768px) {
+  .font_9d927 a, a.font_9d927 {
+    font-weight: 600
+  }
+}
+
+@media (min-width: 769px) {
+  .font_9d927 a:hover, a.font_9d927:hover {
+    text-decoration: underline
+  }
+}
+
+.black_476ed, a.black_476ed {
+  border-bottom-color: #000;
+  color: #000
+}
+
+.xLarge_18016 {
+  font-size: 26px;
+  line-height: 32px
+}
+
+.bold_f69ef {
+  // TODO: DJZHANG(24/10/2017)
+  //> 5) Change “Understand context, not just..” font-weight: 500;
+  font-weight: 500
+}
+
+.title_88ce7 {
+  display: block;
+  margin-bottom: 15px
+}
+
+.text_44214 {
+  font-size: 15px;
+  line-height: 25px;
+  color: #999;
+  font-weight: 200;
+  margin: 10px 0 20px
+}
+
+.button_30e5c {
+  vertical-align: top;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none !important
+}
+
+a.button_30e5c:active, button.button_30e5c:active {
+  -webkit-transform: translateY(1px);
+  transform: translateY(1px)
+}
+
+.button_30e5c[disabled] {
+  cursor: not-allowed;
+  opacity: .3
+}
+
+.button_30e5c path {
+  fill: inherit
+}
+
+.bigSize_8949a {
+  height: 42px;
+  padding: 0 20px
+}
+
+.orangeSolidColor_1132c, .solidVariant_0ef4d.active_037ba {
+  background: #0b9eda;
+  border-color: #0b9eda
+}
+
+.orangeSolidColor_1132c:hover {
+  background: #0884C7;
+  border-color: #0884C7
+}
+
+.orangeSolidColor_1132c.active_037ba {
+  background: #fff;
+  color: #0884C7;
+  fill: #0884C7
+}
+
+.solidVariant_0ef4d {
+  color: #fff;
+  fill: #fff
+}
+
+.solidVariant_0ef4d.active_037ba {
+  color: #fff;
+  fill: #fff
+}
+
+.signup_9df8f {
+  padding: 0 30px
+}
+
+.hero_get_politicl_title {
+  color: #0884C7;
+  margin-top: 8px;
+}
+
+
+

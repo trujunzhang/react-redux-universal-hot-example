@@ -1,0 +1,191 @@
+
+.link_j6xU_ {
+  @include inline-flex();
+}
+
+.sortToggle_3nVmh {
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-transform: capitalize
+}
+
+.discussion_cr2q_ {
+  position: relative;
+  //a:focus, a:hover {
+  //  color: #999;
+  //  text-decoration: underline;
+  //}
+}
+
+.heading_AsD8K {
+  margin: 0 0 20px !important;
+}
+
+// comment note
+
+.thread_1dWPf {
+  margin: 0 0 20px;
+  padding: 7px 0 0 47px;
+  position: relative
+}
+
+.thread_1dWPf:target {
+  -webkit-animation: highlight_2Grvv 2s;
+  animation: highlight_2Grvv 2s
+}
+
+// User's avatar
+.userImage_3lsm5 {
+  position: absolute;
+  left: 0;
+  top: 0
+}
+
+// User's name
+
+.heading_3axGt {
+  @include flexbox();
+  @include align-items(center);
+  @include flex-flow((row wrap));
+  margin: 0 0 10px
+}
+
+// bottom's icons
+
+.actions_3oz6g {
+  @include flex-flow((row wrap));
+  margin: 0 0 10px
+}
+
+.action_Hv6P3, .actions_3oz6g {
+  @include flexbox();
+}
+
+.action_Hv6P3 {
+  @include align-items(center);
+  margin: 0 20px 10px 0;
+  opacity: .8;
+  &:hover {
+    opacity: 1
+  }
+
+  svg {
+    margin: 0 5px 0 0
+  }
+}
+
+@media (max-width: 768px) {
+  .action_Hv6P3 {
+    margin: 0 10px 10px 0
+  }
+}
+
+.upvote_3Nd3Q {
+  fill: #999;
+}
+
+.upvote_3Nd3Q[disabled] {
+  cursor: not-allowed;
+}
+
+.upvote_3Nd3Q path {
+  fill: inherit
+}
+
+@media (max-width: 768px) {
+  .noVotesLabel_1gl1X, .shareLabel_2yYck {
+    display: none
+  }
+}
+
+.tweet_3a9pw {
+  svg {
+    width: 13px;
+    height: 10px;
+    margin: 0 2px 0 0
+  }
+  path {
+    fill: #999
+  }
+  &:hover {
+    color: #00aced
+  }
+}
+
+.tweet_3a9pw:hover path {
+  fill: #00aced
+}
+
+.facebook_1qw8K {
+  path {
+    fill: #999
+  }
+  &:hover {
+    color: #3b5998
+  }
+}
+
+.facebook_1qw8K:hover path {
+  fill: #3b5998
+}
+
+.timestamp_28Wws {
+  display: none;
+  margin-left: auto
+}
+
+.actions_3oz6g:hover > .timestamp_28Wws {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex
+}
+
+// body
+
+.body_221xI {
+  margin: 0 0 10px;
+  word-wrap: break-word;
+}
+
+.body_221xI.tech_Oe_Kz a {
+  color: #5898f1
+}
+
+.body_221xI img {
+  max-height: 1000px
+}
+
+// Input form
+
+.posts-comments-thread-new {
+  margin: 4px;
+}
+
+.document-edit {
+  margin: 0 0 10px;
+}
+
+.input-body {
+  //padding-left: 8px;
+  padding-right: 12px;
+}
+
+// comment item's edit
+.comment-edit, .comment-delete {
+  font-size: $small-font;
+}
+
+.comment-delete {
+  margin-left: 8px;
+}
+
+.icon_2W98y {
+  margin: 0 5px 0 0
+}
+
+.body_221xI {
+  p {
+    margin-bottom: 4px;
+  }
+}

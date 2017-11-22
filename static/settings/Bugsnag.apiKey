@@ -1,0 +1,3 @@
+Bugsnag.appVersion = "2.0.14";
+Bugsnag.autoNotify = true;
+Bugsnag.apiKey = "f0bd7d22c93103a57afd6331713a31bf";

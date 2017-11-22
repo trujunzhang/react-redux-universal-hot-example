@@ -1,0 +1,89 @@
+.u-alignMiddle .u-alignBlock, .u-alignMiddle:before {
+  display: inline-block !important;
+  vertical-align: middle !important
+}
+
+.u-alignMiddle:before {
+  content: '' !important;
+  height: 100% !important
+}
+
+.u-floatLeft {
+  float: left !important
+}
+
+.u-maxWidth920 {
+  max-width: 920px !important;
+}
+
+.u-marginTop180 {
+  margin-top: 180px !important
+}
+
+.u-maxWidth920 {
+  max-width: 920px !important;
+}
+
+@media screen and (max-width: 767px) {
+  .u-xs-marginTop50 {
+    margin-top: 50px !important
+  }
+}
+
+.u-paddingLeft20 {
+  padding-left: 20px !important
+}
+
+.u-height120 {
+  height: 120px !important
+}
+
+.u-alignMiddle .u-alignBlock, .u-alignMiddle:before {
+  display: inline-block !important;
+  vertical-align: middle !important
+}
+
+.u-textColorDarker {
+  color: rgba(0, 0, 0, .8) !important;
+  fill: rgba(0, 0, 0, .8) !important
+}
+
+.u-fontSizeLarger {
+  font-size: 32px !important
+}
+
+.u-uiTextBold {
+  font-family: inherit;
+  letter-spacing: 0 !important;
+  font-weight: 700 !important;
+  font-style: normal !important
+}
+
+.u-fontSizeBase {
+  font-size: 18px !important
+}
+
+.u-uiTextRegular {
+  font-family: inherit;
+  letter-spacing: 0 !important;
+  font-weight: 400 !important;
+  font-style: normal !important
+}
+
+.u-textColorNormal {
+  color: rgba(0, 0, 0, .44) !important;
+  fill: rgba(0, 0, 0, .44) !important
+}
+
+.link--underline {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: underline !important;
+  }
+}
+
+.u-textColorLighter {
+  color: rgba(0, 0, 0, .15) !important;
+  fill: rgba(0, 0, 0, .15) !important
+}

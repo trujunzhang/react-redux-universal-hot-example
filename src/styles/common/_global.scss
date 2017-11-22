@@ -1,0 +1,99 @@
+// @import '{}/node_modules/bootstrap/scss/bootstrap.scss';
+//https://fonts.google.com/specimen/Montserrat?selection.family=Montserrat|Open+Sans
+//@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+
+html {
+  font-family: 'proxima-nova', 'Proxima Nova', sans-serif
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 100%;
+  position: relative;
+
+  .white-background {
+    background: white
+  }
+}
+
+@media (min-width: 769px) {
+  body {
+    background: #f9f9f9;
+  }
+}
+
+.no-scroll {
+  overflow: hidden !important;
+  width: 100%
+}
+
+a {
+  cursor: pointer;
+  color: #0a9fda;
+  transition: color ease-out 300ms;
+  text-decoration: none;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.input, .textarea, .select {
+  border: 0;
+  border-radius: 3px;
+  //box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.11), inset 0 0 0 1px rgba(0, 0, 0, 0.13);
+  color: black;
+  padding: 7px 12px;
+  -webkit-appearance: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  &:focus {
+    //box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.25), inset 0 0 0 1px rgba(0, 0, 0, 0.25);
+    outline: 0;
+  }
+}
+
+.main, .footer, .header {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 $hmargin;
+  max-width: 1200px;
+}
+
+.main {
+  margin-top: 30px;
+  margin-bottom: $vmargin;
+}
+
+.page-title {
+  margin-bottom: $vmargin*2;
+}
+
+@keyframes shimmy-shake {
+  0% {
+    transform: translateX(-1%)
+  }
+
+  20% {
+    transform: translateX(1%)
+  }
+
+  40% {
+    transform: translateX(-1%)
+  }
+
+  60% {
+    transform: translateX(1%)
+  }
+
+  80% {
+    transform: translateX(-1%)
+  }
+
+  100% {
+    transform: translateX(0)
+  }
+}

@@ -9,7 +9,7 @@ const LOGOUT_SUCCESS = 'redux-example/auth/LOGOUT_SUCCESS';
 const LOGOUT_FAIL = 'redux-example/auth/LOGOUT_FAIL';
 
 const initialState = {
-  loaded: false
+  loaded: false,
 };
 
 export default function reducer(state = initialState, action = {}) {
@@ -68,6 +68,7 @@ export default function reducer(state = initialState, action = {}) {
         loggingOut: false,
         logoutError: action.error
       };
+
     default:
       return state;
   }
@@ -94,6 +95,7 @@ export function login(name) {
     })
   };
 }
+
 
 export function logout() {
   return {

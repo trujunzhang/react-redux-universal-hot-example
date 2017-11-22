@@ -1,0 +1,280 @@
+
+ul.postsList_3n2Ck {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.postItem_block {
+  &[disabled] {
+    cursor: not-allowed !important;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.postItem_2pV9v {
+  overflow: hidden;
+  position: relative;
+}
+
+.link_3fUGJ {
+  @include flexbox();
+  border-bottom: 1px solid #f2f2f2;
+}
+
+a.link_3fUGJ {
+  text-decoration: none;
+}
+
+li:last-of-type .link_3fUGJ {
+  border-bottom: 0
+}
+
+.associations_2dmvY {
+  @include flex-shrink(0);
+  margin-left: auto;
+  white-space: nowrap
+}
+
+@media(max-width: 768px) {
+  .link_3fUGJ {
+    padding: 25px 0
+  }
+
+  .additionalActionButtons_BoErh {
+    .button_2n20W {
+      & > :last-child {
+        display: none
+      }
+      & > :first-child {
+        @include flexbox();
+      }
+    }
+  }
+  .postItem_2pV9v {
+    .associations_2dmvY {
+      display: none
+    }
+  }
+}
+
+.actionButtons_2mJsw {
+  @include flexbox();
+  @include flex-shrink(0);
+
+  .button_2n20W {
+    margin-right: 10px;
+  }
+}
+
+@media(min-width: 769px) {
+  .link_3fUGJ {
+    padding: 25px;
+
+    &:hover {
+      background-color: $hover-grey
+    }
+  }
+  .postItem_2pV9v {
+    .associations_2dmvY {
+      @include flexbox();
+    }
+    .additionalActionButtons_BoErh {
+      display: none
+    }
+    &:hover {
+      .additionalActionButtons_BoErh {
+        @include flexbox();
+      }
+    }
+  }
+}
+
+.postActivities_2pvSp {
+  @include flexbox();
+  @include flex-direction(row);
+  @include align-items(center);
+  position: absolute;
+  bottom: 25px;
+
+  & + .link_3fUGJ {
+    padding: 25px 25px 75px
+  }
+
+  & ~ .meta_2lIV- {
+    bottom: 75px
+  }
+}
+
+@media(min-width: 769px) {
+  .postActivities_2pvSp {
+    left: 25px;
+    right: 25px;
+    & + .link_3fUGJ {
+      padding: 25px 25px 75px
+    }
+  }
+}
+
+.body_3co4i {
+  @include flexbox();
+  @include flex-direction(row);
+  @include align-items(center);
+  position: relative;
+  background-color: #fcfcfc;
+  border-radius: 3px;
+  border: 1px solid #f2f2f2;
+  padding: 5px 10px;
+  min-width: 0;
+
+  &:before {
+    border: 9px rgba(194, 225, 245, 0);
+    border-right-color: #f2f2f2;
+    margin-top: -9px
+  }
+  &:after {
+    border: 8px rgba(136, 183, 213, 0);
+    border-right-color: #fcfcfc;
+    margin-top: -8px
+  }
+  &:before, &:after {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none
+  }
+}
+
+// Left thumbnail
+.post-thumbnail {
+  //border-radius: inherit;
+  //height: inherit;
+  //width: inherit;
+  position: relative
+}
+
+.thumbnail_JX64A {
+  margin-right: 15px
+}
+
+.post-left-thumbnail {
+  padding-right: 10px;
+}
+
+@media(max-width: 768px) {
+  .post-left-thumbnail {
+    padding-right: 0 !important;
+  }
+}
+
+//.row_margin_bottom30 {
+//margin-bottom: 30px;
+//}
+
+.post_description {
+  line-height: 24px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: #656565;
+}
+
+.post_description_p {
+  margin-bottom: 10px;
+}
+
+.meta_2lIV- {
+  //position: absolute;
+  //bottom: 25px;
+  @include flexbox();
+  @include align-items(center);
+  @include justify-content(space-between);
+}
+
+@media(min-width: 769px) {
+  //.meta_2lIV-thumbnail {
+  //  left: 160px;
+  //  right: 25px
+  //}
+  //.meta_2lIV-no_thumbnail {
+  //  left: 24px;
+  //  right: 25px
+  //}
+}
+
+@media(max-width: 768px) {
+  //.meta_2lIV-thumbnail {
+  //  left: 135px;
+  //  right: 0
+  //}
+  //.meta_2lIV-no_thumbnail {
+  //  left: 0;
+  //  right: 25px
+  //}
+}
+
+// Image blur loader
+
+.blurry-load-container {
+  background-size: cover;
+  background: #f6f6f6 no-repeat;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 1s linear;
+  }
+
+  img.loaded {
+    opacity: 1;
+  }
+
+  .img-blur {
+    filter: blur(50px);
+  }
+}
+
+.blurry-load-container-avatar {
+  //background-color: #f6f6f6;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  //border-radius: 100%;
+
+  img {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 1s linear;
+  }
+
+  img.avatar-loaded {
+    opacity: 1;
+    border-radius: 100%;
+  }
+
+  .img-blur {
+    filter: blur(50px);
+  }
+}
+
+.posts_content {
+  @include mq($until: tablet) {
+    margin-right: 6px;
+  }
+}
+

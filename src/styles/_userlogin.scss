@@ -1,0 +1,761 @@
+.modal-overlay {
+  background: rgba(255, 255, 255, 0.97);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: $sign-popover-z-index;
+  &.m-loading {
+    &.v-panel .modal--content, &.v-fullscreen {
+      min-height: 40px;
+      min-width: 40px;
+      opacity: 1;
+    }
+    &.v-panel .modal--content.m-hide, &.v-fullscreen.m-hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+    &.v-panel .modal--content:before, &.v-fullscreen:before {
+      background: url(/images/loader-3638d58b829c03562aecc85d014e8040.png) no-repeat;
+      -webkit-animation-name: rotate;
+      -moz-animation-name: rotate;
+      animation-name: rotate;
+      -webkit-animation-duration: 1.2s;
+      -moz-animation-duration: 1.2s;
+      animation-duration: 1.2s;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
+      animation-timing-function: linear;
+      -webkit-transition: opacity 0.1s ease;
+      -moz-transition: opacity 0.1s ease;
+      transition: opacity 0.1s ease;
+      background-size: 40px 40px;
+      content: '';
+      display: block;
+      height: 40px;
+      left: 50%;
+      margin-left: -20px;
+      margin-top: -20px;
+      position: absolute;
+      top: 50%;
+      width: 40px;
+    }
+  }
+}
+
+.modal--close {
+  &.v-desktop {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 200;
+    background: #bbbbbb;
+    border-radius: 50%;
+    padding: 14px 14px 13px 14px;
+    //width: 12px;
+    //height: 12px
+    svg {
+      display: block;
+      path {
+        fill: white;
+      }
+    }
+    &:hover {
+      background: #1ca0d8;
+    }
+  }
+  &.v-mobile {
+    position: absolute;
+    top: 10px;
+    left: 00px;
+    z-index: 200;
+    background: #1E1E1E;
+    border-radius: 0 25px 25px 0;
+    width: 12px;
+    height: 12px;
+    padding: 14px 15px 13px 20px;
+    opacity: 0.5;
+    svg {
+      display: block;
+      path {
+        fill: white;
+      }
+    }
+    &:hover {
+      opacity: 0.3;
+    }
+  }
+}
+
+.v-panel .modal--content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: visible;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  background: white;
+  border-left: 1px solid #f0efef;
+  min-width: 350px;
+}
+
+.login-fullscreen {
+  text-align: center;
+  // background: url('/images/politicl-logo.png') top center/ 265px 65px no-repeat;
+  padding: 90px 10px 50px;
+  margin: 0 80px;
+  border: solid 1px lightgray;
+  border-radius: 4px;
+  padding: 60px 31px;
+  padding-bottom: 20px;
+}
+
+.mobile {
+  .login-fullscreen {
+    // background: url('/images/politicl-logo.png') top center/ 170px 36px no-repeat;
+    padding: 50px 10px 50px;
+  }
+}
+
+.login-fullscreen--title {
+  // font-size: 22px;
+  font-size: 36px;
+  font-weight: 600;
+  padding-top: 14px;
+}
+
+.login-fullscreen--intro, .login-fullscreen--facebook-failed {
+  color: #444;
+  font-size: 18px;
+  margin: 0 auto;
+  max-width: 500px
+}
+
+.login-fullscreen--intro {
+  padding-bottom: 20px
+}
+
+.login-fullscreen--login-info {
+  color: #999;
+  padding-top: 10px;
+  margin-bottom: 4px !important;
+}
+
+.login-fullscreen--users {
+  list-style: none;
+  margin: 0 auto 28px;
+  padding: 0
+}
+
+.login-fullscreen--user {
+  display: inline-block;
+  margin: 0 7px
+}
+
+.signupSolidColor_pdgXp {
+  background: #fff;
+  color: #0a9fda;
+  font-size: 16px;
+}
+
+.buttonGroup_1mB5C {
+  @include flexbox();
+  @include align-items(center);
+  @include justify-content(center);
+
+  > * {
+    margin: 0 10px;
+  }
+  // border: solid 1px gray;
+  padding: 30px;
+  display: block !important;
+  // margin: 0 80px;
+  padding-top: 4px;
+}
+
+//Sign in
+
+.overlay {
+  position: fixed;
+  overflow: auto;
+  text-align: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  z-index: 900;
+  background-color: rgba(255, 255, 255, .97);
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -.25em
+  }
+}
+
+.overlay-dialog {
+  display: inline-block;
+  vertical-align: middle;
+  outline: 0;
+  overflow: hidden;
+  max-width: 580px;
+  padding: 100px 80px;
+  &.overlay-dialog--form {
+    overflow: visible;
+  }
+  .button--signin {
+    width: 100%;
+    height: 58px;
+    border-radius: 2px;
+    font-size: 16px;
+    text-align: left;
+    padding-left: 18px;
+    max-width: 456px;
+  }
+}
+
+.overlay-dialog--animate {
+  transform-origin: bottom center;
+  animation: fade-in-pulse-08 .3s forwards cubic-bezier(.8, .02, .45, .91)
+}
+
+.overlay-title {
+  color: rgba(0, 0, 0, .8);
+  font-size: 24px;
+  line-height: 1.1;
+  margin-bottom: 6px;
+
+  letter-spacing: 0;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.overlay-title--thin {
+  letter-spacing: 0;
+  font-weight: 300;
+  font-style: normal
+}
+
+.overlay-subtitle {
+  margin-bottom: 30px;
+  font-size: 18px;
+  letter-spacing: 0;
+  font-weight: 300;
+  font-style: normal
+}
+
+.overlay-content {
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.4;
+  margin-bottom: 30px;
+  > a {
+    text-decoration: underline;
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.overlay-actions > .button {
+  margin-bottom: 10px
+}
+
+.overlay-title + .overlay-actions {
+  margin-top: 40px
+}
+
+.overlay-label {
+  font-size: 18px;
+  margin-top: 20px;
+  letter-spacing: 0;
+  font-weight: 700;
+  font-style: normal
+}
+
+.overlay-footer {
+  font-size: 12px;
+  color: rgba(0, 0, 0, .44);
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.overlay--interstitial .overlay-content > p {
+  width: 450px;
+  line-height: 1.4;
+}
+
+.overlay--storiesInterstitial .overlay-dialog, .overlay-dialog--update {
+  transform-origin: none;
+  animation: none;
+}
+
+.overlay-dialog--alert, .overlay-dialog--confirm, .overlay-dialog--signin {
+  text-align: center;
+}
+
+.overlay-dialog--list .overlay-title {
+  margin-bottom: 25px;
+}
+
+.overlay-dialog--email .overlay-content {
+  margin-bottom: 0;
+}
+
+.overlay-formContainer {
+  max-width: 500px;
+  margin: 0 auto;
+  @include align-content(center);
+}
+
+.overlay--collabInterstitial .overlay-dialog {
+  width: 590px;
+}
+
+.overlay--collabInterstitial .overlay-title {
+  margin-bottom: 15px
+}
+
+.overlay--collabInterstitial .overlay-animation {
+  display: block;
+  height: 168px;
+  width: 100%
+}
+
+.overlay--collabInterstitial .overlay-actions {
+  text-align: center
+}
+
+.overlay--dark {
+  //background-color: rgba(0, 0, 0, .6);
+
+  .overlay-dialog {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.44);
+    padding: 0;
+    max-width: 520px;
+  }
+  .overlay-title, .overlay-title--context {
+    margin-bottom: 0;
+    background-color: #f0f0f0;
+    padding: 24px 24px 24px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .overlay-actions {
+    margin-bottom: 32px;
+  }
+  .overlay-title--context {
+    padding: 10px;
+  }
+  .button--close {
+    color: #fff;
+  }
+  .overlay-content {
+    padding: 0 32px 0;
+    // TODO djzhang: 04/02/2017
+    //margin: 18px 0;
+    font-size: 16px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .overlay-dialog--wait {
+    padding: 0;
+  }
+  .overlay-footer {
+    margin: 0 0 16px;
+  }
+  .overlay-dialog--wait .overlay-content {
+    margin: 0;
+    padding-top: 32px;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 18px;
+  }
+  .overlay-dialog--email .button--link {
+    margin-top: -24px;
+  }
+}
+
+.overlay--import {
+  font-size: 18px
+}
+
+.overlay--import > .overlay-title {
+  font-size: 44px;
+  letter-spacing: 0;
+  font-weight: 700;
+  font-style: normal
+}
+
+.overlay--import > .overlay-content {
+  margin: 30px -100px;
+  letter-spacing: 0;
+  font-weight: 300;
+  font-style: normal
+}
+
+.overlay-item {
+  margin-left: 3.5%;
+  margin-right: 3.5%;
+  width: 26%
+}
+
+.overlay-itemHeader {
+  color: #0a9fda;
+  font-size: 32px;
+  margin-bottom: 10px
+}
+
+.overlay-itemText {
+  font-size: 18px;
+  min-height: 60px;
+  margin-bottom: 10px
+}
+
+.overlay-itemImage {
+  height: 166px
+}
+
+.overlayRegistration {
+  max-width: 400px
+}
+
+.overlayRegistration .textInput {
+  width: 100%;
+  margin-bottom: 10px
+}
+
+.overlayRegistration-followTwitter, .overlayRegistration-likeFacebook, .overlayRegistration-shadowMessage, .overlayRegistration-terms {
+  font-size: 14px;
+  text-align: left;
+  margin: 10px 0 0
+}
+
+.overlayRegistration-terms {
+  margin-top: 25px
+}
+
+.overlayRegistration-terms > a {
+  text-decoration: underline
+}
+
+.overlayRegistration-shadowMessage .shadowMessage-title {
+  font-weight: 700
+}
+
+.overlayRegistration-checkbox {
+  vertical-align: 1px;
+  margin-right: 4px
+}
+
+.overlay-signin--waiting {
+  max-width: 300px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, .44);
+  margin: 0 auto
+}
+
+.signinPrivacyMessages .link {
+  text-decoration: underline
+}
+
+.overlay-embed {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #eee #ddd #bbb;
+  position: relative;
+  overflow: hidden;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, .15) 0 1px 3px
+}
+
+.tweetEditor-avatar {
+  float: left;
+  padding: 2px 0;
+  margin-right: 14px
+}
+
+.tweetEditor-tweetContainer {
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: 5px;
+  padding: 14px 20px;
+  overflow: hidden
+}
+
+.tweetEditor-error {
+  font-size: 14px;
+  cursor: default
+}
+
+.tweetEditor-textContainer {
+  display: block;
+  font-size: 16px;
+  color: rgba(0, 0, 0, .8)
+}
+
+.tweetEditor-textContainer .inlineError--maxLength::after {
+  font-size: 14px;
+  margin-top: 2px
+}
+
+.tweetEditor-textshot {
+  text-align: left;
+  margin-top: 16px
+}
+
+.tweetEditor-imageContainer {
+  display: inline-block;
+  position: relative
+}
+
+.tweetEditor-imageStatus {
+  color: rgba(0, 0, 0, .44);
+  font-size: 14px
+}
+
+.tweetEditor-imageStatusIcon {
+  margin-right: 5px;
+  font-size: 18px
+}
+
+.tweetEditor-image {
+  height: 220px;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: 4px;
+  cursor: zoom-in;
+  transition: height .1s
+}
+
+.tweetEditor-image.tweetEditor-image--expanded {
+  height: 340px;
+  cursor: zoom-out
+}
+
+.tweetEditor-removeTextshot {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  background: #b3b3b1;
+  border-color: #b3b3b1;
+  color: #fff
+}
+
+.tweetEditor-removeTextshot:active, .tweetEditor-removeTextshot:focus, .tweetEditor-removeTextshot:hover {
+  background: rgba(0, 0, 0, .8);
+  border-color: rgba(0, 0, 0, .8);
+  color: #fff
+}
+
+// Or via twitter facebook
+#user-sigin {
+  .button--chromeless, .button--link {
+    border-radius: 0;
+    box-shadow: none;
+    height: auto;
+    line-height: inherit;
+    border-width: 0;
+    padding: 0;
+    vertical-align: baseline;
+    color: rgba(0, 0, 0, .44);
+    white-space: normal;
+    text-align: left;
+  }
+}
+
+.textInput--large {
+  // font-size: 18px;
+  font-size: 14px;
+  height: 40px;
+  margin: 10px auto;
+  overflow: hidden;
+  padding: 7px;
+  width: 420px;
+  white-space: nowrap;
+  letter-spacing: 0;
+  font-weight: 300;
+  font-style: normal
+}
+
+.textInput--signin {
+  width: 100%
+}
+
+// Login/ register button
+// #user-submit-button-panel {
+//   margin-right: 28px;
+// }
+
+#sign-up-button {
+  border-radius: 12px !important;
+}
+
+#user-signin-panel {
+  .textInput--underlined {
+    // border: 0;
+    // border-bottom: 1px solid rgba(0, 0, 0, .15);
+    // border-radius: 0
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+  }
+  .signInClass {
+    width: 100%;
+    text-transform: initial;
+    font-size: 14px;
+  }
+}
+
+// main login footer links
+.login_footer_links {
+  a {
+    margin: 0 4px;
+    line-height: 27px;
+    text-decoration: underline !important;
+    font-size: 14px;
+    color: #0a9fda;
+
+    &:hover {
+      text-decoration: underline !important;
+      outline: 0 !important;
+      color: #0a9fff;
+    }
+  }
+
+}
+
+@media (min-width: 769px) {
+  .modal-overlay.v-fullscreen {
+    @include flexbox();
+    @include align-content(center);
+    @include align-items(center);
+    @include justify-content(center);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .overlay-keyboardDef {
+    float: none;
+    width: auto
+  }
+}
+
+@media screen and (max-width: 767px) and (max-height: 500px) {
+  .overlay-dialog {
+    width: 80%;
+    padding: 30px 0
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .overlay-dialog {
+    width: 80%;
+    padding: 0
+  }
+  .overlay-title {
+    font-size: 24px;
+    padding-top: 35px
+  }
+  .overlay-content {
+    font-size: 16px
+  }
+  .overlay--collabInterstitial .overlay-animation {
+    height: 84px
+  }
+  .overlay--interstitial .overlay-content > p {
+    width: 100%
+  }
+  .overlay-formContainer {
+    width: auto;
+    max-width: 500px;
+  }
+  .overlay--dark {
+    padding: 10px 0;
+    .overlay-dialog {
+      width: 100%;
+      box-shadow: none;
+      border-radius: 0;
+      vertical-align: top;
+      max-width: 100%;
+    }
+    .overlay-actions {
+      margin-bottom: 16px;
+    }
+    .overlay-title {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    .overlay-content {
+      //padding: 0 16px
+
+    }
+    .button--signin {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+      max-width: 100%;
+    }
+    .button--close {
+      z-index: 200;
+      color: rgba(0, 0, 0, 0.44);
+      right: 5px;
+    }
+    &::before {
+      margin-right: 0;
+    }
+  }
+}
+
+#popover_for_loginui {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+#button_for_forgot_password {
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.3;
+  }
+}
+
+#login_main_section {
+  .mediumSize_10tzU i.fa {
+    font-size: 22px;
+  }
+  i.fa.fa-facebook-official {
+    margin-left: 10px;
+  }
+  .mediumSize_10tzU {
+    padding-left: 0px;
+    text-transform: initial;
+    font-size: 13px;
+    display: flex;
+    margin-top: 12px !important;
+  }
+
+}
+
+.LoginFormFooter {
+  text-align: center;
+  margin: 0 80px;
+  padding: 20px 31px;
+  a.user_main_link {
+    display: block;
+  }
+}
+

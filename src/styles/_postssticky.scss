@@ -1,0 +1,25 @@
+
+.stickyHeader_3O362 {
+  position: fixed;
+  @include flexbox();
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $stickyHeader-z-index;
+  display: none;
+}
+
+.stickyHeaderVisible_1ANTP {
+  display: block
+}
+
+.stickyHeaderContent_2CnRC {
+  background-color: #fff;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, .05), 0 2px 4px 0 rgba(0, 0, 0, .06);
+  box-sizing: border-box;
+  @include flexbox();
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1072px;
+  padding: 10px 20px
+}

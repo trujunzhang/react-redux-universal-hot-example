@@ -1,0 +1,44 @@
+$hmargin: 10px;
+$vmargin: 15px;
+
+$smaller-font: 0.8rem;
+$small-font: 0.9rem;
+$medium-font: 1rem;
+$large-font: 1.25rem;
+$larger-font: 1.35rem;
+
+$posts-overlay-z-index: 100;
+$posts-overlay-close-z-index: 200;
+$stickyHeader-z-index: 2000;
+$popover-z-index: 2001;
+
+$sign-popover-z-index: 2002;
+
+// 30/04/2017:
+//#d2d2d2 for searcher placeholder text
+$search-placeholder-color:#d2d2d2;
+
+$border: 1px solid $light-border;
+
+@mixin activeHover {
+  &:hover {
+    background: $active-color;
+    color: $white;
+    border-color: $active-color;
+    text-decoration: none;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin border-radius {
+  border-radius: .25rem;
+}
+
+@mixin border {
+  border: $border;
+}
+

@@ -1,0 +1,59 @@
+.navigation_1aRHD {
+  box-sizing: border-box;
+  overflow: hidden;
+  @include mq($from: desktop) {
+    display: none;
+  }
+  @include mq($until: desktop) {
+    width: 100%
+  }
+
+  .smallScreen_2XpvC {
+    @include mq($from: desktop) {
+      display: none;
+    }
+  }
+
+}
+
+//@media(min-width: 769px) {
+//  .smallScreen_2XpvC {
+//    display: none !important
+//  }
+//}
+
+//@media(max-width: 768px) {
+//  .navigation_1aRHD {
+//    width: 100%
+//  }
+//}
+//
+//@media(min-width: 769px) {
+//  .navigation_1aRHD {
+//    display: none;
+//  }
+//}
+
+.stickyNavigation_2WCiu {
+  position: relative;
+}
+
+@media(max-width: 768px) {
+  .mediumOrLargeScreen_3y2bV {
+
+  }
+}
+
+.mobileNavToggle_32nLg {
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+  display: block
+}
+
+.mobileNavToggle_32nLg .rotateIcon_343Gl {
+  display: inline-block;
+  transform: rotate(-90deg);
+  position: relative;
+  top: -2px
+}

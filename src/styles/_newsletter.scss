@@ -1,0 +1,100 @@
+.container_R3fsF {
+  @include flexbox();
+  @include flex-direction(column);
+  @include align-items(center);
+  margin-top: 30px;
+  padding: 15px 0;
+  position: relative;
+  text-align: center
+}
+
+@media(max-width: 768px) {
+  .container_R3fsF {
+    //display: none
+  }
+}
+
+.boxContent_2e30p {
+  @include flexbox();
+  @include flex-flow((row wrap));
+  @include align-items(center);
+  @include justify-content(center);
+}
+
+.welcomeEmoji_3oUs1 {
+  font-size: 25px;
+  line-height: 25px
+}
+
+.welcome_emoji_icon {
+  padding-right: 8px;
+}
+
+.tagline_1UlAa {
+  @include justify-content(space-between);
+  display: block;
+  margin-left: 10px;
+  line-height: 30px
+}
+
+.form_1Nyhn {
+  @include justify-content(flex-end);
+  margin-left: 10px;
+  @include flex-direction(row);
+}
+
+.fieldWrap_1C8su, .form_1Nyhn {
+  @include flexbox();
+}
+
+.fieldWrap_1C8su {
+  position: relative
+}
+
+.field_34Q-8 {
+  border-radius: 3px;
+  border: 1px solid #f2f2f2;
+  box-sizing: border-box;
+  padding: 0 10px;
+  width: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #000;
+  &:focus {
+    outline: 0
+  }
+  &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder, &::placeholder {
+    color: #999;
+  }
+}
+
+.close_1JGKW {
+  cursor: pointer;
+  position: absolute;
+  top: 23px;
+  right: 20px;
+  margin-bottom: 4px;
+  svg path {
+    fill: #999
+  }
+}
+
+.mobile {
+  .close_1JGKW {
+    top: 12px !important;
+  }
+}
+
+.news_letter_button_panel {
+  margin-left: 16px;
+}
+
+.close_postlist {
+  cursor: pointer;
+  top: 25px;
+  right: 20px;
+  svg path {
+    fill: #999
+  }
+}
+

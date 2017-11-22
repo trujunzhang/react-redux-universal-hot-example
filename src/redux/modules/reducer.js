@@ -1,6 +1,6 @@
-import { combineReducers } from 'redux';
+import {combineReducers} from 'redux';
 import multireducer from 'multireducer';
-import { routerReducer } from 'react-router-redux';
+import {routerReducer} from 'react-router-redux';
 import {reducer as reduxAsyncConnect} from 'redux-async-connect';
 
 import auth from './auth';
@@ -11,8 +11,8 @@ import widgets from './widgets';
 
 export default combineReducers({
   routing: routerReducer,
-  reduxAsyncConnect,
   auth,
+  reduxAsyncConnect,
   form,
   multireducer: multireducer({
     counter1: counter,
@@ -20,5 +20,12 @@ export default combineReducers({
     counter3: counter
   }),
   info,
-  widgets
+  widgets,
+  detailedModelsOverlay: require('./detailedModelsOverlay'),
+  user: require('./user'),
+  editModel: require('./editModel/editModelReducer'),
+  authModel: require('./auth/authReducer'),
+  userProfileTask: require('./userProfile'),
+  listContainerTasks: require('./listContainerReducer'),
+  appAlert: require('./alert'),
 });
